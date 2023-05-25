@@ -9,5 +9,9 @@ public class Main {
 
         Message test2 = new Message("abcxyz", caesarCipher, 3);
         System.out.println(test2.getPlainText() + " --> " + test2.getCipherText());
+
+        FrequencyAnalyser analyser = new FrequencyAnalyser(test1);
+        analyser.analyse();
+        System.out.println(analyser.getFrequencies());
     }
 }
